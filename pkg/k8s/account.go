@@ -7,7 +7,7 @@ import (
 
 	awsv1alpha1 "github.com/openshift/aws-account-operator/api/v1alpha1"
 	awsprovider "github.com/openshift/osdctl/pkg/provider/aws"
-	"k8s.io/api/core/v1"
+	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -38,7 +38,7 @@ func GetAccountClaimFromClusterID(
 	clusterID string,
 ) (*awsv1alpha1.AccountClaim, error) {
 	var accountClaims awsv1alpha1.AccountClaimList
-	labelSelector, err := labels.Parse(fmt.Sprintf("api.openshift.com/id=%s", clusterID))
+	labelSelector, err := labels.Parse(fmt.Sprintf("api.openshiftusgov.com/id=%s", clusterID))
 	if err != nil {
 		return nil, err
 	}
