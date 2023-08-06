@@ -17,7 +17,7 @@ import (
 const ClusterServiceClusterSearch = "id = '%s' or name = '%s' or external_id = '%s'"
 
 const (
-	productionURL  = "https://api.openshift.com"
+	productionURL  = "https://api.openshiftusgov.com"
 	stagingURL     = "https://api.stage.openshift.com"
 	integrationURL = "https://api.integration.openshift.com"
 )

@@ -257,7 +257,7 @@ func (r *Resize) RunInfra(ctx context.Context) error {
 
 func (r *Resize) getInfraMachinePool(ctx context.Context) (*hivev1.MachinePool, error) {
 	ns := &corev1.NamespaceList{}
-	selector, err := labels.Parse(fmt.Sprintf("api.openshift.com/id=%s", r.clusterId))
+	selector, err := labels.Parse(fmt.Sprintf("api.openshiftusgov.com/id=%s", r.clusterId))
 	if err != nil {
 		return nil, err
 	}
