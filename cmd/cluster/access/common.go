@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	hiveNSLabelKey = "api.openshiftusgov.com/id"
+	hiveNSLabelKey = "api.openshiftus.com/id"
 )
 
 // isAffirmative returns true if the provided input indicates user agreement ("y" or "Y")

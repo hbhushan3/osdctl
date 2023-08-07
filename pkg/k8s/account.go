@@ -38,7 +38,7 @@ func GetAccountClaimFromClusterID(
 	clusterID string,
 ) (*awsv1alpha1.AccountClaim, error) {
 	var accountClaims awsv1alpha1.AccountClaimList
-	labelSelector, err := labels.Parse(fmt.Sprintf("api.openshiftusgov.com/id=%s", clusterID))
+	labelSelector, err := labels.Parse(fmt.Sprintf("api.openshift.com/id=%s", clusterID))
 	if err != nil {
 		return nil, err
 	}

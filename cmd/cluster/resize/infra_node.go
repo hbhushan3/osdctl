@@ -259,7 +259,7 @@ func (r *Resize) getInfraMachinePool(ctx context.Context) (*hivev1.MachinePool, 
 	ns := &corev1.NamespaceList{}
 
 	fmt.Println("selecting")
-	selector, err := labels.Parse(fmt.Sprintf("api.openshiftusgov.com/id=%s", r.clusterId))
+	selector, err := labels.Parse(fmt.Sprintf("api.openshiftus.com/id=%s", r.clusterId))
 	if err != nil {
 		return nil, err
 	}
@@ -273,7 +273,7 @@ func (r *Resize) getInfraMachinePool(ctx context.Context) (*hivev1.MachinePool, 
 	fmt.Printf("check if nodes are there - %v", nodes)
 
 	if len(ns.Items) != 1 {
-		return nil, fmt.Errorf("expected 1 namespace, found %d namespaces with tag: api.openshiftusgov.com/id=%s", len(ns.Items), r.clusterId)
+		return nil, fmt.Errorf("expected 1 namespace, found %d namespaces with tag: api.openshift.com/id=%s", len(ns.Items), r.clusterId)
 	}
 
 	log.Printf("found namespace: %s", ns.Items[0].Name)
